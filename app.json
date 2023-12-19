@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "focustimer",
-    "slug": "snack-3db59a79-c5b9-4db1-b0b4-0cfc9bd7f621",
+    "slug": "snack-b9cbdbf1-abd8-41fb-a1ad-2a54f08c5756",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "de925bc7-394e-4a66-968d-12f0ce7193a8"
+      }
     }
   }
 }

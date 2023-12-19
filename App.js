@@ -13,6 +13,7 @@ import { colors } from './src/utils/colors';
 import { Focus } from './src/features/Focus';
 import { Timer } from './src/features/Timer';
 import { FocusHistory } from './src/features/FocusHistory';
+import { RoundedButton } from './src/components/RoundedButton';
 
 export default function App() {
   const [currentText, SetCurrentText] = useState(null);
@@ -23,6 +24,23 @@ export default function App() {
         <>
           <Focus addText={SetCurrentText} style={styles.focusField} />
           <FocusHistory history={history} style={styles.focusHistory} />
+          {history.length !== 0 && (
+            <View
+              style={{
+                flex: 1,
+                justifyContent: 'end',
+                alignItems: 'center',
+                paddingBottom: 20,
+              }}>
+              <RoundedButton
+                size={100}
+                title={'clear'}
+                onPress={() => {
+                  setHistory([]);
+                }}
+              />
+            </View>
+          )}
         </>
       ) : (
         <Timer
